@@ -1,9 +1,15 @@
 #title{
     text-align: center;
 }
+#img-div{
+    max-width: 100%;
+    height: auto;
+    
+}
 #image{
-    margin:auto;
-    justify-self: center;
+    width: 100%;
+   
+
 }
 #img-caption{
     font-size: 20px;
