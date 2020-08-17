@@ -1,0 +1,12 @@
+#title{
+    text-align: center;
+}
+#image{
+    margin:auto;
+    justify-self: center;
+}
+#img-caption{
+    font-size: 20px;
+    font-weight:bold;
+    text-align: center;
+}
