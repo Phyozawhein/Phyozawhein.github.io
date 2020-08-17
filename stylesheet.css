@@ -1,6 +1,9 @@
 #title{
     text-align: center;
-}
+    background: linear-gradient(35deg, cyan, pink);
+    padding: 10px;
+    margin: 0px;
+    }
 #img-div{
     max-width: 100%;
     height: auto;
@@ -15,4 +18,31 @@
     font-size: 20px;
     font-weight:bold;
     text-align: center;
+}
+#tribute-link{
+    display: flex;
+    flex-direction: column;
+    
+}
+#author-title{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#author-pic{
+    height: auto;
+    width: 15%;
+    border-radius: 50%;
+    margin: 15px;
+    
+}
+#author-div{
+   
+    display:flex;
+    align-items: center;
+}
+
+#author-info{
+    text-align: justify;
+    line-height: 25px;
 }
