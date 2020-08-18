@@ -1,29 +1,4 @@
-#title{
-    text-align: center;
-    background: linear-gradient(35deg, cyan, pink);
-    padding: 10px;
-    margin: 0px;
-    }
-#img-div{
-    max-width: 100%;
-    height: auto;
-    
-}
-#image{
-    width: 100%;
-   
 
-}
-#img-caption{
-    font-size: 20px;
-    font-weight:bold;
-    text-align: center;
-}
-#tribute-link{
-    display: flex;
-    flex-direction: column;
-    
-}
 #author-title{
     font-size: 20px;
     font-weight: bold;
@@ -40,9 +15,51 @@
    
     display:flex;
     align-items: center;
+   
 }
 
 #author-info{
     text-align: justify;
     line-height: 25px;
 }
+#img-div{
+    max-width: 100%;
+    height: auto;
+    
+}
+img{
+    width: 100%;
+height: auto;
+max-width: 100%;
+margin-left: auto;
+margin-right: auto;
+display: block;
+
+}
+#img-caption{
+    font-size: 20px;
+    font-weight:bold;
+    text-align: center;
+}
+
+#links{
+    display: flex;
+    flex-direction: column;
+    
+}
+#survey-form{
+    display: grid;
+   justify-content: center;
+}
+#name{
+    grid-column: 2/3;
+}
+#tribute-info{
+    background: linear-gradient(45deg, pink, cyan)
+}
+#title{
+    text-align: center;
+
+    padding: 0px;
+    margin: 0px;
+    }

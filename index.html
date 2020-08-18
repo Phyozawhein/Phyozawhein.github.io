@@ -1,46 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheet.css"/>
-    <title>Phyo Zaw Hein</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stylesheet.css" />
+  <title>Phyo Zaw Hein</title>
 </head>
+
 <body>
 
-<div id="main">
-   
-    <h1 id="title">Phyo's Tribute Page</h1>
-   
+  <div id="main">
+
     <div id="img-div">
-        <img src="https://i1.wp.com/constructs.stampede-design.com/wp-content/uploads/2017/01/javascriptlogo-2.jpg?resize=1024%2C377&ssl=1" alt="javascript logo" id="image">
+      <img src="Intro.gif" alt="javascript logo" id="image">
+      
     </div>
-   
-    <figcaption id="img-caption">Java Script logo</figcaption>
-    
+
     <div id="tribute-info">
-        <div id="author-div">
-        <img src="https://image.freepik.com/free-vector/cute-fennec-fox-cartoon-hand-drawn-style_42349-134.jpg" alt="" id="author-pic"> 
-        <div id="tribute-link">
+      <div id="author-div">
+        <img src="https://image.freepik.com/free-vector/cute-fennec-fox-cartoon-hand-drawn-style_42349-134.jpg" alt="" id="author-pic">
+            <div id="links">
             <span id="author-title"> About me </span>
-             <a href="https://github.com/Phyozawhein" target="_blank" >my Github account</a>
-             <a href="https://www.linkedin.com/in/phyo-hein-45104b156/" target="_blank">my Linked In account</a>
-        </div>
-       
-
-    </div>
+            <a  id="tribute-link" href="https://github.com/Phyozawhein" target="_blank">my Github account</a>
+            <a href="https://www.linkedin.com/in/phyo-hein-45104b156/" target="_blank">my Linked In account</a>
+            </div>
+            
       </div>
-        <p id="author-info">
-            My name is Phyo Zaw Hein. I come from a south east Asian country.
-            I am a junior student majoring in computer science in CCNY. My main focus is in
-            software engineering and I am very good at HTML, CSS, and Javascript. I have my fair share
-            of experience with a number of Java Script namely: React, React Native,and Vue. As for
-            backend, I have some experience in MYSQL and used HeidiSQL for framework.
-        </p>
-       </div>
+      <p id="author-info">
+        My name is Phyo Zaw Hein. I come from a south east Asian country.
+        I am a junior student majoring in computer science in CCNY. My main focus is in
+        software engineering and I am very good at HTML, CSS, and Javascript. I have my fair share
+        of experience with a number of Java Script namely: React, React Native,and Vue. As for
+        backend, I have some experience in MYSQL and used HeidiSQL for framework.
+      </p>
+    </div>
     
-    
-</div>
+  </div>
 
+  <div id="survey">
+
+    <h1 id="title">Survey Form</h1>
+    <p id="description">
+        This survey form is to find out how many of my viewers love 
+        hamburgers ! 
+    </p>
+    <form  id="survey-form">
+        <label id="name-label" for="name">
+            Name: <input type="text" name="name" id="name" placeholder="Name" required/>
+        </label>
+        
+        <label id="email-label" for="email">
+            Email: <input type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Email" required/>
+        </label>
+        
+        <label id="number-label" for="number">
+            Number: <input type="number" name="number" id="number" min="0" max="9" placeholder="Number" required/>
+        </label>
+  
+        <p>Where are you from ? </p>
+        <select name="country" id="dropdown">
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+            <option value="Mexico">Mexico</option>
+        </select>
+        <p>Which hamburger do you like ? (Not restricted to one !)</p>
+        <label for="meat">
+            <input type="radio" name="meat" id="" value="meat">   Meat Hamburger
+        </label>
+        
+        <label for="vegetarian">
+            <input type="radio" name="vegetarian" id="" value="vegetarian"> Vegetarian Hamburger
+        </label>
+        
+        <label for="cheese">
+            <input type="radio" name="cheese" id="" value="cheese">  Cheese Hamburger
+        </label>
+        
+        <textarea name="thoughts" id="" cols="30" rows="10" placeholder="Any thoughts ?"></textarea>
+        
+        <input type="submit" value="Submit" id="submit">
+    </form>
+  </div>
+  
+  
 </body>
+
 </html>
