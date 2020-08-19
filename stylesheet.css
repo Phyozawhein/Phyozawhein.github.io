@@ -21,6 +21,8 @@
 #author-info{
     text-align: justify;
     line-height: 25px;
+    margin-bottom: 0px;
+    padding-bottom: 10px;
 }
 #img-div{
     max-width: 100%;
@@ -29,11 +31,11 @@
 }
 img{
     width: 100%;
-height: auto;
-max-width: 100%;
-margin-left: auto;
-margin-right: auto;
-display: block;
+    height: auto;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 
 }
 #img-caption{
@@ -41,25 +43,46 @@ display: block;
     font-weight:bold;
     text-align: center;
 }
-
 #links{
     display: flex;
     flex-direction: column;
     
 }
-#survey-form{
-    display: grid;
-   justify-content: center;
-}
 #name{
     grid-column: 2/3;
 }
+#submit{
+    width: 100%;
+    background-color: rgb(20, 209, 20);
+    color: white;
+    padding: 5px ;
+    margin: 5px 0px;
+    justify-self: center;
+
+}
+#survey{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    margin: 0px;
+    background: linear-gradient(90deg,rgb(221, 213, 213),rgb(172, 166, 166))
+}
+#survey-form{
+    padding: 15px;
+    background: rgba(44, 130, 201, 1);
+}
 #tribute-info{
-    background: linear-gradient(45deg, pink, cyan)
+    background: linear-gradient(90deg,rgb(221, 213, 213),rgb(172, 166, 166))
+
 }
 #title{
     text-align: center;
-
     padding: 0px;
     margin: 0px;
     }
+textarea{
+ display:block;
+ margin-top: 10px;
+ width: 100%;
+}
