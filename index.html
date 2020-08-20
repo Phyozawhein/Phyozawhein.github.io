@@ -2,42 +2,264 @@
 <html lang="en">
 
 <head>
+
+  <style>
+
+@media (max-width: 650px) {
+  .dev-img > img {
+    margin: 0 auto;
+  }
+}
+
+    a:link, a:visited {  
+    border: none;
+    color: #FFFFFF;
+    padding: 15px 32px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    }
+    a:hover{
+      scale: 1.5;
+    }
+    .css-skill{
+      animation-name:cssSkill;
+      background-color: rgb(86, 107, 221);
+    }
+    .dev-img{
+      border-radius: 50px;
+      width: 40%;
+      height: auto;
+      float:left;
+      
+      margin-right: 20px;
+    }
+
+    h2{
+      margin: 0px;
+      padding: 0px;
+    }
+    #header{
+      padding : 0px;
+      margin: 0px;
+      background-color: grey;
+      width:100%;
+      position: fixed;
+      top: 0;
+      
+    }
+    #header-img{
+      width: 5%;
+      height: auto;
+      border-radius: 50%;
+      margin:10px;
+  
+    }
+    #home-card{
+      
+      padding: 10px 15px;
+      width: 75%;
+      border-radius: 50px;
+      text-align: center;
+      
+    }
+    html{
+        background: url('https://coolbackgrounds.io/images/backgrounds/index/sea-edge-79ab30e2.png')
+        no-repeat center center fixed;
+        background-size: cover;
+        height: 100%;
+        overflow: scroll;
+        }
+    .html-skill{
+      animation-name: htmlSkill;
+      background-color: rgb(228, 71, 15);
+
+    }
+    .js-skill{
+      animation-name: jsSkill;
+      background-color:orange;
+    }
+    #main{
+      max-width: 1000px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    #nav-bar{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 50px;
+    }
+    .sets{
+      float: right;
+    }
+    #skills{
+      display:flex;
+      flex-direction: row;
+    }
+    .skill-bar{
+      width: 40px;
+      height: 40px;
+      border-radius: 5px;
+      margin-left: 10px;
+      animation-duration: 3s;
+      animation-fill-mode: forwards;
+      text-align: center;
+      color: white;
+      font-weight: bold;
+      padding-top: 15px;
+      
+    }
+    #skill-card{
+      background-color: silver;
+      box-shadow: 0 10px 10px 0 rgba(0,0,0,0.5);
+      padding: 10px 15px;
+      width: 75%;
+      border-radius: 50px;
+      text-align: center;
+      margin: 10px;
+    }
+
+    .skill-set{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .skill-item{
+      display: flex;
+      align-items:center;
+    }
+    .skill-icon{
+      max-width: 15%;
+      max-height: auto;
+      margin: 10px;
+    }
+    #submit{
+      margin-top:10px;
+    }
+    ul{
+      list-style: none;
+      display: flex;
+
+    }
+    #video{
+      max-width: 100%;
+      height: auto;
+      margin: 10px;
+      
+
+    }
+    @keyframes htmlSkill{
+      0%{
+        width: 0%;
+      }
+      100%{
+        width:70%;
+      }
+    }
+
+    @keyframes cssSkill{
+      0%{
+        width: 0%;
+      }
+      100%{
+        width:90%;
+      }
+      }
+      @keyframes jsSkill{
+        0%{
+          width: 0%;
+        }
+      100%{
+        width:60%;
+      }
+      }  
+      
+  </style>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="stylesheet" href="/css/stylesheet.css" />
   <title>Phyo Zaw Hein</title>
+
 </head>
 
 <body>
 
-  <div id="main">
-
-    <div id="img-div">
-      <img src="/assets/Intro.gif" alt="javascript logo" id="image">
-    </div>
-
-    <div id="author-info">
-
-      <div id="author-div">
-        <img src="https://image.freepik.com/free-vector/cute-fennec-fox-cartoon-hand-drawn-style_42349-134.jpg" alt="" id="author-pic">
-            <div id="links">
-            <span id="author-title"> About me </span>
-            <a  id="tribute-link" href="https://github.com/Phyozawhein" target="_blank">my Github account</a>
-            <a href="https://www.linkedin.com/in/phyo-hein-45104b156/" target="_blank">my Linked In account</a>
-            </div>   
-      </div>
-      <p >
-        My name is Phyo Zaw Hein. I come from a south east Asian country.
-        I am a junior student majoring in computer science in CCNY. My main focus is in
-        software engineering and I am very good at HTML, CSS, and Javascript. I have my fair share
-        of experience with a number of Java Script namely: React, React Native,and Vue. As for
-        backend, I have some experience in MYSQL and used HeidiSQL for framework.
-      </p>
-    </div>
-
-    
-  </div>
+  <header id="header">
+ 
+     <nav id="nav-bar">
+      <img src="https://banner2.cleanpng.com/20180602/oiv/kisspng-web-development-web-service-web-developer-digital-develop-5b131963a04d78.6954247915279783396566.jpg" alt="" id="header-img">
+       <ul>
+         <li>
+          <a  class="nav-link" href="#home">Home</a>
+         </li>
+         <li >
+           <a  class="nav-link" href="#skills">Skills</a>
+          </li>
+         <li >
+           <a class="nav-link" href="#contact">Contact</a>
+        </li>
+       </ul>
+       </nav>
   
+  </header>
+
+ <br>
+
+    <div id="home">
+      <div id="home-card">
+        <h1 >Hi ! Welcome to Phyo's Product Page</h1>
+        <video src="/assets/Catto.mp4" id="video"  controls></video>
+          <p id="description">Here is a mixed tape of Thurston the cat </p>
+    
+      </div>
+    </div>
+  
+    <div id="skill-card">
+      
+      <h2>My Skills</h2>
+      <div id="skills">
+        
+        <img class="dev-img" src="https://image.freepik.com/free-vector/cute-fennec-fox-cartoon-hand-drawn-style_42349-134.jpg" alt="Dev picture">
+        
+        <div class="skill-set">
+          <div class="skill-item">
+            <img src="assets/HTML.png" class="skill-icon">
+            <div class="skill-bar html-skill">8/10</div>
+          </div>
+          <div class="skill-item">
+            <img src="assets/CSS.png" alt="" class="skill-icon">
+            <div class="skill-bar css-skill">9/10</div>
+          </div>
+          <div class="skill-item">
+            <img src="assets/JS.png" alt="" class="skill-icon">
+            <div class="skill-bar js-skill">7/10</div>
+          </div>
+         
+        </div>
+        
+      </div>
+  
+    </div>
+   
+    <div id="contact">
+      <form action="https://www.freecodecamp.com/email-submit" method="POST" id="form">
+        <h2>Contact</h2>
+         <p>If you want to contact me, enter the email and click "Contact" button to ping me!</p>
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" pattern="[0-9a-zA-z]+@[a-zA-z0-9]+.com" placeholder="Email">
+          
+          <input type="submit" value="Contact" id="submit">
+  
+      </form>
+    </div>
+ 
+  
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 
 
