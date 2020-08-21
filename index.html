@@ -30,6 +30,19 @@
       animation-name:cssSkill;
       background-color: rgb(86, 107, 221);
     }
+    #contact{
+      background: linear-gradient(45deg, orange,gold);
+      box-shadow: 0 10px 10px 0 rgba(0,0,0,0.5);
+      padding: 10px 15px;
+      border-radius: 50px;
+      text-align: center;
+      margin: 10px;
+    }
+    #description{
+        justify-self: center;
+        font-size: 20px;
+        font-weight: bold;
+    }
     .dev-img{
       border-radius: 50px;
       width: 40%;
@@ -38,7 +51,9 @@
       
       margin-right: 20px;
     }
-
+   #home{
+      text-align: center;
+    }
     h2{
       margin: 0px;
       padding: 0px;
@@ -59,16 +74,9 @@
       margin:10px;
   
     }
-    #home-card{
-      
-      padding: 10px 15px;
-      width: 75%;
-      border-radius: 50px;
-      text-align: center;
-      
-    }
+ 
     html{
-        background: url('https://coolbackgrounds.io/images/backgrounds/index/sea-edge-79ab30e2.png')
+        background: url('assets/cool-background.png')
         no-repeat center center fixed;
         background-size: cover;
         height: 100%;
@@ -78,6 +86,21 @@
       animation-name: htmlSkill;
       background-color: rgb(228, 71, 15);
 
+    }
+    .item-card{
+      width: 100%;
+      padding: 10px;
+      display: flex;
+      flex-direction: row;
+    }
+    .item-icons{
+      width: 10%;
+      height:auto;
+      margin-right: 20px;
+      
+    }
+    .item-descrip{
+      align-self: center;
     }
     .js-skill{
       animation-name: jsSkill;
@@ -94,12 +117,20 @@
       align-items: center;
       height: 50px;
     }
+    #proudct-card{
+      
+      display: flex;
+      flex-direction: column;
+      
+
+    }
     .sets{
       float: right;
     }
     #skills{
       display:flex;
       flex-direction: row;
+      justify-content: center;
     }
     .skill-bar{
       width: 40px;
@@ -114,20 +145,25 @@
       padding-top: 15px;
       
     }
-    #skill-card{
-      background-color: silver;
-      box-shadow: 0 10px 10px 0 rgba(0,0,0,0.5);
+ 
+    #skill-card > h2,  .feature-title {
+      background: linear-gradient(90deg, yellow, gold);
+     
       padding: 10px 15px;
-      width: 75%;
       border-radius: 50px;
       text-align: center;
       margin: 10px;
     }
 
-    .skill-set{
+    .skill-set {
       display: flex;
       flex-direction: column;
       align-items: center;
+      
+      padding: 10px 15px;
+      border-radius: 50px;
+      text-align: center;
+      margin: 0px;
     }
     .skill-item{
       display: flex;
@@ -211,12 +247,29 @@
  <br>
 
     <div id="home">
-      <div id="home-card">
-        <h1 >Hi ! Welcome to Phyo's Product Page</h1>
-        <video src="/assets/Catto.mp4" id="video"  controls></video>
-          <p id="description">Here is a mixed tape of Thurston the cat </p>
-    
+      <h1 >Welcome to Phyo's Product Page</h1>
+        <p>I am UI developer. My passion is coding and creating webpages and watch them work !   </p>
+        <video src="/assets/catto.mp4" id="video"   width="400px" height="400px"controls></video>
+          
+        <p id="description">Here is a video of "Thuston the cat" agreeing on my coding skills </p>
+     
+    </div>
+
+    <div id="product-card">
+      <h2 class="feature-title"> Quality of my services</h2>
+      <div class="item-card">
+        <img class="item-icons" src='assets/chain_link.png' alt="robust icon"> </img>
+        <h2 class="item-descrip">Robust : The code is guarantee to work in all browsers !</h2>
       </div>
+      <div class="item-card">
+        <img src="assets/thumbs_up.png" alt="simple icon" class="item-icons">
+        <h2 class="item-descrip">Simple: All you need to do is download and its ready ! </h2>
+      </div>
+      <div class="item-card">
+        <img src="/assets/stylish.png" alt="stylish icon" class="item-icons">
+        <h2 class="item-descrip">Stylish: The fashion is up to date !</h2>
+      </div>
+
     </div>
   
     <div id="skill-card">
@@ -227,6 +280,7 @@
         <img class="dev-img" src="https://image.freepik.com/free-vector/cute-fennec-fox-cartoon-hand-drawn-style_42349-134.jpg" alt="Dev picture">
         
         <div class="skill-set">
+
           <div class="skill-item">
             <img src="assets/HTML.png" class="skill-icon">
             <div class="skill-bar html-skill">8/10</div>
@@ -247,8 +301,9 @@
     </div>
    
     <div id="contact">
+      <h2>Contact</h2>
       <form action="https://www.freecodecamp.com/email-submit" method="POST" id="form">
-        <h2>Contact</h2>
+        
          <p>If you want to contact me, enter the email and click "Contact" button to ping me!</p>
             <label for="email">Email: </label>
             <input type="email" name="email" id="email" pattern="[0-9a-zA-z]+@[a-zA-z0-9]+.com" placeholder="Email">
