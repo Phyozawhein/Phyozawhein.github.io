@@ -45,11 +45,10 @@
     }
     .dev-img{
       border-radius: 50px;
-      width: 40%;
+      max-width: 300px;
       height: auto;
       float:left;
       
-      margin-right: 20px;
     }
    #home{
       text-align: center;
@@ -59,20 +58,26 @@
       padding: 0px;
     }
     #header{
-      padding : 0px;
-      margin: 0px;
-      background-color: grey;
-      width:100%;
+ 
       position: fixed;
       top: 0;
-      
+      left:0;
+      display: flex;       
+      margin: 0px;
+      width:100%;
+      height: 40px;
+      padding : 5px;
+      align-items: center;
+      background-color: silver;
+      padding: 10px;
+     
     }
+
     #header-img{
-      width: 5%;
+      max-width: 50px;
       height: auto;
       border-radius: 50%;
-      margin:10px;
-  
+     
     }
  
     html{
@@ -106,22 +111,19 @@
       animation-name: jsSkill;
       background-color:orange;
     }
+
     #main{
       max-width: 1000px;
       width: 100%;
       margin: 0 auto;
     }
     #nav-bar{
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      height: 50px;
+      margin-right: 200px;
     }
+
     #proudct-card{
-      
       display: flex;
       flex-direction: column;
-      
 
     }
     .sets{
@@ -173,6 +175,9 @@
       max-width: 15%;
       max-height: auto;
       margin: 10px;
+    }
+    #space{
+      height: 60px;
     }
     #submit{
       margin-top:10px;
@@ -226,28 +231,32 @@
 <body>
 
   <header id="header">
- 
-     <nav id="nav-bar">
-      <img src="https://banner2.cleanpng.com/20180602/oiv/kisspng-web-development-web-service-web-developer-digital-develop-5b131963a04d78.6954247915279783396566.jpg" alt="" id="header-img">
-       <ul>
-         <li>
-          <a  class="nav-link" href="#home">Home</a>
-         </li>
-         <li >
-           <a  class="nav-link" href="#skills">Skills</a>
+    
+    <img src="https://banner2.cleanpng.com/20180602/oiv/kisspng-web-development-web-service-web-developer-digital-develop-5b131963a04d78.6954247915279783396566.jpg" alt="" id="header-img">
+      <nav id="nav-bar">
+       
+        
+         <ul id="links">
+           <li>
+            <a  class="nav-link" href="#home">Home</a>
+           </li>
+           <li >
+             <a  class="nav-link" href="#skills">Skills</a>
+            </li>
+           <li >
+             <a class="nav-link" href="#contact">Contact</a>
           </li>
-         <li >
-           <a class="nav-link" href="#contact">Contact</a>
-        </li>
-       </ul>
-       </nav>
+         </ul>
+         
+        </nav>
+   
+        
   
   </header>
 
- <br>
-
+  <div id="space"></div>
     <div id="home">
-      <h1 >Welcome to Phyo's Product Page</h1>
+       <h1 >Welcome to Phyo's Product Page</h1>
         <p>I am UI developer. My passion is coding and creating webpages and watch them work !   </p>
         <video src="/assets/catto.mp4" id="video"   width="400px" height="400px"controls></video>
           
@@ -306,7 +315,7 @@
         
          <p>If you want to contact me, enter the email and click "Contact" button to ping me!</p>
             <label for="email">Email: </label>
-            <input type="email" name="email" id="email" pattern="[0-9a-zA-z]+@[a-zA-z0-9]+.com" placeholder="Email">
+            <input type="email" name="email" id="email" pattern="[0-9a-zA-z.@]+@[a-zA-z0-9]+.com" placeholder="Email">
           
           <input type="submit" value="Contact" id="submit">
   
