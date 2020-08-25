@@ -1,347 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
-  <style>
-  @media (min-height: 600px) and (min-width: 831px) {
- #navbar, #main-doc {
-  position:fixed
- }
-}
-  code{
-    background-color:rgb(231, 222, 222);
-    
-  }
-    pre{
-      background-color:rgb(231, 222, 222);
-    }
-  #main-doc{
-    position: absolute;;
-    left: 320px;
-    overflow-x:hidden;
-    overflow-y:auto;
-  }
-
-  #navbar{
-  position: fixed;
-  min-width: 290px;
-  top: 0px;
-  left: 0px;
-  width: 300px;
-  height: 100%;
-  border-right: solid;
-  border-right-color: currentcolor;
-  border-color: rgba(0, 22, 22, 0.4);
-  overflow-x: wrap;
-  overflow-y:auto;
-  }
-  #navbar h3{
-    text-align: center;
-  }
-  #navbar ul{
-    list-style: none;
-    align-self: center;
+<style>
+body{
     padding: 0px;
-    
-
-  }
-  #navbar li{
-    padding : 10%;
-    margin: 10px;
-    text-align:left;
-    border-top: black solid;
     margin: 0px;
-    
   }
-  #navbar a{
-    text-decoration: none;
-    text-align: left;
-    overflow-wrap: break-word;
-    
+html{
+    font-family: Helvetica, Courier, monospace;
+    color: white;
   }
 
-  table, td, tr ,th{
-    border: 1px solid black;
-  }
-
-  td, tr{
+  a:link, a:visited {  
+    border: none;
+    color: #FFFFFF;
+    padding: 15px 32px;
     text-align: center;
-  }
-      
-  </style>
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    }
+    a:hover{
+      scale: 1.5;
+    }
 
+.nav-link{
+  margin-right: 20px;
+  font-size: 30px;
+  
+}
+.nav-link a{
+  text-decoration: none;
+  color: white;
+  font-size: 40px;
+  
+}
+
+.title{
+  padding: 20px;
+  font-size: 50px;
+  margin: 0px;
+  position: relative;
+  top: 20px;
+}
+
+.welcome-title{
+  position: relative;
+  top: 50%;
+  font-size: 100px;
+  animation-name: welcome-animation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  margin: 0px;
+}
+
+#dev-logo{
+  margin: 20px;
+  width: 100px;
+  height: auto;
+  -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+#dev-logo:hover{
+  scale: 1.5;
+}
+
+#author{
+  margin:  auto;
+  width: auto;
+  height: 100vh;
+  text-align: center;
+  background-color: rgb(29, 28, 28);
+  background-size: 100% 100%;
+  background-position: 50% 50%;
+  }
+
+#project{
+  margin: 0 auto;
+  width: auto;
+  height: 100vh;
+  text-align: center;
+  background-image: url("assets/author-background.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  }
+#navbar{
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  z-index: 2;
+
+  }
+#navitems{
+  box-shadow: 5px 10px 8px #888888;
+  
+}
+#navlist{
+  list-style:none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#welcome-section{
+  background: linear-gradient(45deg, cyan , pink);
+  width: auto;
+  height: 100vh;
+  padding: 0px;
+  margin: 0px ;
+  text-align: center;
+  
+  }
+  
+@keyframes welcome-animation{
+  
+    0%{
+      opacity: 0;
+      left: -10%;
+    }
+
+    100%{
+      opacity: 1;
+      left: 0%;
+    }
+  }
+
+</style>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Phyo Zaw Hein</title>
-
+  <title>Phyo Zaw Hein's Portfolio</title>
 </head>
 
 <body>
   <nav id="navbar">
-    <header><h3>Java : Learning Basics</h3></header>
-    <ul>
-
-      <li><a class="nav-link"  href="#Language_basics">Language basics</a></li>
-      <li><a class="nav-link"  href="#Variables">Variables</a></li>
-      <li><a class="nav-link"  href="#Operators">Operators</a></li>
-      <li><a class="nav-link"  href="#Expressions,_Statements,_and_Blocks">Expressions, Statements, and Blocks</a></li>
-      <li><a class="nav-link"  href="#Control_Flow_Statement">Control Flow Statement</a></li>
-   
+    <img id="dev-logo" src="assets/icons8-source-code-64.png" alt="Code logo">
+    <ul id="navlist">
+      <li class="nav-link"> <a href="#welcome-section"> Home </a> </li>
+      <li class="nav-link"> <a href="#project"> Personal Projects </a> </li>
+      <li class="nav-link"> <a href="#author"> About me </a></li>
     </ul>
+
   </nav>
 
-<main id="main-doc">
-  <section class="main-section" id="Language_basics">
-    <header><h2>Language basics</h2></header>
-    <h4>Variables</h4>
-    <p>You've already learned that objects store their state in fields. However, the Java programming language also uses the term "variable" as well. This section discusses this relationship, plus variable naming rules and conventions, basic data types (primitive types, character strings, and arrays), default values, and literals. </p>
-    <h4>Operators</h4>
-    <p>This section describes the operators of the Java programming language. It presents the most commonly-used operators first, and the less commonly-used operators last. Each discussion includes code samples that you can compile and run.</p>
-    <h4>Expressions, Statements, and Blocks</h4>
-    <p>Operators may be used in building expressions, which compute values; expressions are the core components of statements; statements may be grouped into blocks. This section discusses expressions, statements, and blocks using example code that you've already seen. </p>
-    <h4>Control Flow Statements</h4>
-    <p>This section describes the control flow statements supported by the Java programming language. It covers the decisions-making, looping, and branching statements that enable your programs to conditionally execute particular blocks of code. </p>
-  </section>
-<section class="main-section" id="Variables">
-  <header><h2>Variables</h2></header>
-  <p>As you learned in the previous lesson, an object stores its state in fields.</p>
-  <code>int cadence = 0;</code>
-  <code>int speed = 0;</code>
-  <code>int gear = 1;</code>
-  <p>
-    The What Is an Object? discussion introduced you to fields, 
-    but you probably have still a few questions, such as: 
-    What are the rules and conventions for naming a field? 
-    Besides int, what other data types are there? 
-    Do fields have to be initialized when they are declared? 
-    Are fields assigned a default value if they are not explicitly initialized?
-    We'll explore the answers to such questions in this lesson, 
-    but before we do, there are a few technical distinctions you must first 
-    become aware of. In the Java programming language, the terms "field" 
-    and "variable" are both used; this is a common source of confusion among 
-    new developers, since both often seem to refer to the same thing.
+  <div id="welcome-section">
 
-    The Java programming language defines the following kinds of variables:</p>
-  
-  </p>
-  <ul>
-    <li><strong>Instance Variables (Non-Static Fields)</strong> 
-      Technically speaking, objects store their individual states 
-      in "non-static fields", that is, fields declared without the static keyword. 
-      Non-static fields are also known as instance variables because their values 
-      are unique to each instance of a class (to each object, in other words); 
-      the currentSpeed of one bicycle is independent from the currentSpeed of another.
-    </li>
-    <li>
-      <strong>Class Variables (Static Fields)</strong> A class variable is any field declared with the static modifier; 
-      this tells the compiler that there is exactly one copy of this variable 
-      in existence, regardless of how many times the class has been instantiated. 
-      A field defining the number of gears for a particular kind of bicycle could 
-      be marked as static since conceptually the same number of gears will apply 
-      to all instances. The code static int numGears = 6; would create such a 
-      static field. Additionally, the keyword final could be added to indicate 
-      that the number of gears will never change.
-    </li>
-    <li>
-      <strong>Local Variables</strong>Similar to how an object stores its state in fields, 
-      a method will often store its temporary state in local variables. 
-      The syntax for declaring a local variable is similar to declaring 
-      a field (for example, int count = 0;). There is no special keyword 
-      designating a variable as local; that determination comes entirely 
-      from the location in which the variable is declared — which is between 
-      the opening and closing braces of a method. As such, local variables are 
-      only visible to the methods in which they are declared; they are not 
-      accessible from the rest of the class.
-    </li>
-    <li>
-      <strong>Parameters</strong>You've already seen examples of parameters, 
-      both in the Bicycle class and in the main method of the "Hello World!" 
-      application. Recall that the signature for the main method is public static 
-      void main(String[] args). Here, the args variable is the parameter to this 
-      method. The important thing to remember is that parameters are always 
-      classified as "variables" not "fields". This applies to other 
-      parameter-accepting constructs as well (such as constructors and 
-      exception handlers) that you'll learn about later in the tutorial.
-    </li>
-  </ul>
-  <p>
-    Having said that, the remainder of this tutorial uses the following general guidelines when discussing fields and variables. If we are talking about "fields in general" (excluding local variables and parameters), we may simply say "fields". If the discussion applies to "all of the above", we may simply say "variables". If the context calls for a distinction, we will use specific terms (static field, local variables, etc.) as appropriate. You may also occasionally see the term "member" used as well. A type's fields, methods, and nested types are collectively called its members.
-  </p>
-  <h3>Naming</h3>
-  <p>Every programming language has its own set of rules and conventions for the kinds of names that you're allowed to use, and the Java programming language is no different. The rules and conventions for naming your variables can be summarized 
-    as follows:
-  </p>
-  <ul>
-    <li>
-      Variable names are case-sensitive. A variable's name can be any legal identifier — an unlimited-length sequence of Unicode letters and digits, beginning with a letter, the dollar sign "$", or the underscore character "_". The convention, however, is to always begin your variable names with a letter, not "$" or "_". Additionally, the dollar sign character,by convention, is never used at all. You may find some situations where auto-generated names will contain the dollar sign, but your variable names should always avoid using it. A similar convention exists for the underscore character; while it's technically legal to begin your variable's name with "_", this practice is discouraged. White space is not permitted.
-    </li>
-    <li>
-      Subsequent characters may be letters, digits, dollar signs, or underscore characters. Conventions (and common sense) apply to this rule as well. When choosing a name for your variables, use full words instead of cryptic abbreviations. Doing so will make your code easier to read and understand. In many cases it will also make your code self-documenting; fields named cadence, speed, and gear, for example, are much more intuitive than abbreviated versions, such as s, c, and g. Also keep in mind that the name you choose must not be a keyword or reserved word.
-    </li>
-    <li>
-      If the name you choose consists of only one word, spell that word in all lowercase letters. If it consists of more than one word, capitalize the first letter of each subsequent word. The names gearRatio and currentGear are prime examples of this convention. If your variable stores a constant value, such as static final int NUM_GEARS = 6, the convention changes slightly, capitalizing every letter and separating subsequent words with the underscore character. By convention, the underscore character is never used elsewhere.
-    </li>
-  </ul>
-</section>
-<section class="main-section" id="Operators">
-  <header><h2>Operators</h2></header>
-  <p>Now that you've learned how to declare and initialize variables, you probably want to know how to do something with them. Learning the operators of the Java programming language is a good place to start. Operators are special symbols that perform specific operations on one, two, or three operands, and then return a result.</p>
-  <p>As we explore the operators of the Java programming language, it may be helpful for you to know ahead of time which operators have the highest precedence. The operators in the following table are listed according to precedence order. The closer to the top of the table an operator appears, the higher its precedence. Operators with higher precedence are evaluated before operators with relatively lower precedence. Operators on the same line have equal precedence. When operators of equal precedence appear in the same expression, a rule must govern which is evaluated first. All binary operators except for the assignment operators are evaluated from left to right; assignment operators are evaluated right to left.</p>
-  <table>
-    <tr>
-      <th>Operators</th>
-      <th>Precedence</th>
-    </tr>
-    <tr>
-      <td>postfix</td>
-      <td><code>expr++ expr--</code></td>
-    </tr>
-    <tr>
-      <td>unary</td>
-      <td><code>++expr --expr +expr -expr ~ !</code></td>
-    </tr>
-    <tr>
-      <td>multiplicative</td>
-      <td><code>* / %</code></td>
-    </tr>
-    <tr>
-      <td>additive</td>
-      <td><code>+ - </code></td>
-    </tr>
-    <tr>
-      <td>shift</td>
-      <td><code><< >> >>></code></td>
-    </tr>
-    <tr>
-      <td>relational</td>
-      <td><code> < > <= >= instanceof</code></td>
-    </tr>
-    <tr>
-      <td>equality</td>
-      <td><code>== !=</code></td>
-    </tr>
-    <tr>
-      <td>bitwise AND</td>
-      <td><code>&</code></td>
-    </tr>
-    <tr>
-      <td>bitwise exclusive OR</td>
-      <td><code>^</code></td>
-    </tr>
-    <tr>
-      <td>bitwise inclusive OR</td>
-      <td><code>|</code></td>
-    </tr>
-    <tr>
-      <td>logical AND</td>
-      <td><code>&&</code></td>
-    </tr>
-    <tr>
-      <td>logical OR</td>
-      <td><code>||</code></td>
-    </tr>
-    <tr>
-      <td>ternary</td>
-      <td><code>? :</code></td>
-    </tr>
-    <tr>
-      <td>assignment</td>
-      <td><code>= += -= *= /= %= &= |= <<= >>= >>>=</code></td>
-    </tr>
-</table>
-</section>
-<section class="main-section" id="Expressions,_Statements,_and_Blocks">
-  <header><h2>Expressions, Statements, and Blocks</h2></header>
-  <p>Now that you understand variables and operators, it's time to learn about expressions, statements, and blocks. Operators may be used in building expressions, which compute values; expressions are the core components of statements; statements may be grouped into blocks.</p>
-  <h4>Expressions</h4>
-  <p>
-    An expression is a construct made up of variables, operators, and method invocations, which are constructed according to the syntax of the language, that evaluates to a single value. You've already seen examples of expressions, illustrated in bold below:
-  </p>
-  <pre>
-    <code>
-    int cadence = 0;
-    anArray[0] = 100;
-    System.out.println("Element 1 at index 0: " + anArray[0]);
+    <h1 class="welcome-title">Welcome to my portfolio</p>
+    
+  </div>
 
-    int result = 1 + 2; // result is now 3
-    if (value1 == value2) 
-    System.out.println("value1 == value2");
-    </code>
-  </pre>
+  <div id="project">
+    <h1 class="title">Here are the Projects I am Working On :</h1>
+  </div>
 
-  <p>
-    The data type of the value returned by an expression depends on the elements used in the expression. The expression cadence = 0 returns an int because the assignment operator returns a value of the same data type as its left-hand operand; in this case, cadence is an int. As you can see from the other expressions, an expression can return other types of values as well, such as boolean or String. The Java programming language allows you to construct compound expressions from various smaller expressions as long as the data type required by one part of the expression matches the data type of the other. Here's an example of a compound expression:
-  </p>
-  <p>
-    In this particular example, the order in which the expression is evaluated is unimportant because the result of multiplication is independent of order; the outcome is always the same, no matter in which order you apply the multiplications. However, this is not true of all expressions. For example, the following expression gives different results, depending on whether you perform the addition or the division operation first:
-  </p>
-  <p></p>
-  <p></p>
-  <p></p>
-  <h4>Statements</h4>
-  <p>
-    Statements are roughly equivalent to sentences in natural languages. A statement forms a complete unit of execution. The following types of expressions can be made into a statement by terminating the expression with a semicolon (;).
-  </p>
-  <ul>
-    <li>Assignment expressions</li>
-    <li>Any use of ++ or --</li>
-    <li>Method invocations</li>
-    <li>Object creation expressions</li>
-  </ul>
-  <p>
-    Such statements are called expression statements. Here are some examples of expression statements.
-  </p>
-  <pre>
-      // assignment statement
-      aValue = 8933.234;
-      // increment statement
-      aValue++;
-      // method invocation statement
-      System.out.println("Hello World!");
-      // object creation statement
-      Bicycle myBike = new Bicycle();
-  </pre>
-  <p>
-    In addition to expression statements, there are two other kinds of statements: declaration statements and control flow statements. A declaration statement declares a variable. You've seen many examples of declaration statements already:
-  </p>
-  <pre>
-    // declaration statement
-    double aValue = 8933.234;
-  </pre>
-  <p>
-    Finally, control flow statements regulate the order in which statements get executed. You'll learn about control flow statements in the next section, Control Flow Statements
-  </p>
-  <h4>Blocks</h4>
-  <p>
-   A block is a group of zero or more statements between balanced braces and can be used anywhere a single statement is allowed. The following example, BlockDemo, illustrates the use of blocks:
-  </p>
-  <pre>
-    class BlockDemo {
-      public static void main(String[] args) {
-           boolean condition = true;
-           if (condition) { // begin block 1
-                System.out.println("Condition is true.");
-           } // end block one
-           else { // begin block 2
-                System.out.println("Condition is false.");
-           } // end block 2
-      }
- }
- 
-  </pre>
-</section>
-<section class="main-section" id="Control_Flow_Statement">
-  <header><h2>Control Flow Statement</h1></header>
-  <p>
-    The statements inside your source files are generally executed from top to bottom, in the order that they appear. Control flow statements, however, break up the flow of execution by employing decision making, looping, and branching, enabling your program to conditionally execute particular blocks of code. This section describes the decision-making statements (if-then, if-then-else, switch), the looping statements (for, while, do-while), and the branching statements (break, continue, return) supported by the Java programming language.
-  </p>
- 
-</section>
+<div id="author">
+  <h1 class="title">About Me :</h1>
+</div>
 
-</main>
+
+
   
 
 </body>
+
+<footer>
+
+  <div id="profile-link">
+
+  </div>
+
+</footer>
 
 </html>

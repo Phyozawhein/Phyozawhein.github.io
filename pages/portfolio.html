@@ -1,111 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <style>
-
-#author-title{
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-#author-pic{
-    height: auto;
-    width: 15%;
-    border-radius: 50%;
-    margin: 15px;
-    
-}
-#author-div{
-   
-    display:flex;
-    align-items: center;
-   
-}
-
-#author-info{
-    text-align: justify;
-    line-height: 25px;
-    margin-bottom: 0px;
-    padding-bottom: 10px;
-}
 body{
-    background: linear-gradient(90deg,rgb(221, 213, 213),rgb(172, 166, 166))
-
-}
-#img-div{
-    max-width: 100%;
-    height: auto;
-    
-}
-img{
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-
-}
-#img-caption{
-    font-size: 20px;
-    font-weight:bold;
-    text-align: center;
-}
-#links{
-    display: flex;
-    flex-direction: column;
-    
-}
-#name{
-    grid-column: 2/3;
-}
-
-
-#title{
-    text-align: center;
     padding: 0px;
     margin: 0px;
+  }
+html{
+    font-family: Helvetica, Courier, monospace;
+    color: white;
+  }
+
+#author{
+  margin:  auto;
+  width: auto;
+  height: 100vh;
+  text-align: center;
+  background-color: rgb(29, 28, 28);
+  background-size: 100% 100%;
+  background-position: 50% 50%;
+  }
+
+#project{
+  margin: 0 auto;
+  width: auto;
+  height: 100vh;
+  text-align: center;
+  background-image: url("assets/author-background.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  }
+
+.nav-link{
+  margin: 10px;
+  font-size: 30px;
+  
+}
+.nav-link a{
+  text-decoration: none;
+  color: white;
+}
+.nav-link a:hover{
+  
+}
+.title{
+  padding: 20px;
+  font-size: 50px;
+  margin: 0px;
+  position: relative;
+  top: 20px;
+}
+
+.welcome-title{
+  position: relative;
+  top: 50%;
+  font-size: 100px;
+  animation-name: welcome-animation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  margin: 0px;
+}
+
+#navbar{
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  z-index: 2;
+
+  }
+#navitems{
+  box-shadow: 5px 10px 8px #888888;
+  
+}
+#navlist{
+  list-style:none;
+  display: flex;
+  flex-direction: row;
+ 
+}
+#welcome-section{
+  background: linear-gradient(45deg, cyan , pink);
+  width: auto;
+  height: 100vh;
+  padding: 0px;
+  margin: 0px ;
+  text-align: center;
+  
+  }
+  
+@keyframes welcome-animation{
+  
+    0%{
+      opacity: 0;
+      left: -10%;
     }
 
+    100%{
+      opacity: 1;
+      left: 0%;
+    }
+  }
 
 </style>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <!--<link rel="stylesheet" href="stylesheet.css" />--> 
-  <title>Phyo Zaw Hein</title>
+  <title>Phyo Zaw Hein's Portfolio</title>
 </head>
 
 <body>
+  <nav id="navbar">
+    <ul id="navlist">
+      <li class="nav-link"> <a href="#welcome-section"> Home </a> </li>
+      <li class="nav-link"> <a href="#project"> Personal Projects </a> </li>
+      <li class="nav-link"> <a href="#author"> About me </a></li>
+    </ul>
 
-  <div id="main">
+  </nav>
 
-    <div id="img-div">
-      <img src="/assets/Intro.gif" alt="javascript logo" id="image">
-    </div>
+  <div id="welcome-section">
 
-    <div id="author-info">
-
-      <div id="author-div">
-        <img src="https://image.freepik.com/free-vector/cute-fennec-fox-cartoon-hand-drawn-style_42349-134.jpg" alt="Author profile picture" id="author-pic">
-            <div id="links">
-            <span id="author-title"> About me </span>
-            <a  id="tribute-link" href="https://github.com/Phyozawhein" target="_blank">my Github account</a>
-            <a href="https://www.linkedin.com/in/phyo-hein-45104b156/" target="_blank">my Linked In account</a>
-            </div>   
-      </div>
-      <p >
-        My name is Phyo Zaw Hein. I come from a south east Asian country.
-        I am a junior student majoring in computer science in CCNY. My main focus is in
-        software engineering and I am very good at HTML, CSS, and Javascript. I have my fair share
-        of experience with a number of Java Script namely: React, React Native,and Vue. As for
-        backend, I have some experience in MYSQL and used HeidiSQL for framework.
-      </p>
-    </div>
-
+    <h1 class="welcome-title">Welcome to my portfolio</p>
     
   </div>
+
+  <div id="project">
+    <h1 class="title">Here are the Projects I am Working On :</h1>
+  </div>
+
+<div id="author">
+  <h1 class="title">About Me :</h1>
+</div>
+
+
+
   
+
 </body>
 
+<footer>
+
+  <div id="profile-link">
+
+  </div>
+
+</footer>
 
 </html>
