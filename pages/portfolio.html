@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <style>
+@media (max-width: 550px){
+ 
+}
+
 body{
     padding: 0px;
     margin: 0px;
@@ -10,57 +14,119 @@ html{
     color: white;
   }
 
-#author{
-  margin:  auto;
-  width: auto;
-  height: 100vh;
-  text-align: center;
-  background-color: rgb(29, 28, 28);
-  background-size: 100% 100%;
-  background-position: 50% 50%;
+  a:link, a:visited {  
+    border: none;
+    color: #FFFFFF;
+    padding: 0px 10px;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    }
+    a:hover{
+      transform:scale(1.2);
+      display: inline-block;
+    }
+  .contact-link{
+    width: 50px;
+    height: auto;
+    
   }
-
-#project{
-  margin: 0 auto;
-  width: auto;
-  height: 100vh;
-  text-align: center;
-  background-image: url("assets/author-background.png");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+  .contact-title{
+    text-align: center;
+    margin: 0 ;
+    padding: 10px;
   }
+  .email{
+    margin: 0px;
+    padding: 10px 0;
+    text-align: center;
+    align-self: center;
+  }
+.items{
+  margin-top: 50px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width:100%;
+  height: auto;
+  
+}
 
+.project-link{
+  width:100%;
+  height: auto;
+}
 .nav-link{
-  margin: 10px;
-  font-size: 30px;
-  
+  margin-right: 20px;
 }
-.nav-link a{
-  text-decoration: none;
-  color: white;
-}
-.nav-link a:hover{
-  
-}
+
+
 .title{
+  text-align: center;
   padding: 20px;
   font-size: 50px;
   margin: 0px;
-  position: relative;
   top: 20px;
 }
 
 .welcome-title{
   position: relative;
-  top: 50%;
-  font-size: 100px;
+  top: 45%;
+  font-size: 200%;
   animation-name: welcome-animation;
   animation-duration: 1s;
   animation-fill-mode: forwards;
   margin: 0px;
+  max-width: 100%
+}
+#contact-me{
+  background-color:grey;
+  margin: 0px;
+  max-height: 10%;
+  
+}
+#dev-logo{
+  margin: auto;
+  width: auto;
+  height: auto;
+  -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+#dev-logo:hover{
+  transform:scale( 1.5);
+  
 }
 
+#author{
+  margin:  auto;
+  width: auto;
+  height: 100vh;
+  background-color: rgb(29, 28, 28);
+  background-size: 100% 100%;
+  background-position: 50% 50%;
+  }
+
+#projects{
+  margin: 0 auto;
+  width: auto;
+  height: 100vh;
+  background-image: url("assets/author-background.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  }
+#profile-link{
+  margin: 0 auto;
+  width: auto;
+  padding:0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 #navbar{
   margin: 0px;
   padding: 0px;
@@ -68,7 +134,7 @@ html{
   flex-direction: row;
   position: fixed;
   z-index: 2;
-
+  max-width:100%;
   }
 #navitems{
   box-shadow: 5px 10px 8px #888888;
@@ -78,7 +144,7 @@ html{
   list-style:none;
   display: flex;
   flex-direction: row;
- 
+  align-items: center;
 }
 #welcome-section{
   background: linear-gradient(45deg, cyan , pink);
@@ -109,12 +175,12 @@ html{
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Phyo Zaw Hein's Portfolio</title>
 </head>
-
 <body>
   <nav id="navbar">
+    <img id="dev-logo" src="assets/icons8-source-code-64.png" alt="Code logo">
     <ul id="navlist">
       <li class="nav-link"> <a href="#welcome-section"> Home </a> </li>
-      <li class="nav-link"> <a href="#project"> Personal Projects </a> </li>
+      <li class="nav-link"> <a href="#projects"> Personal Projects </a> </li>
       <li class="nav-link"> <a href="#author"> About me </a></li>
     </ul>
 
@@ -126,13 +192,31 @@ html{
     
   </div>
 
-  <div id="project">
-    <h1 class="title">Here are the Projects I am Working On :</h1>
-  </div>
+  <section id="projects" class="projects-section">
+    <h1 class="title">Projects</h1>
+    <div class="items">
+      <a href="pages/product_landing.html" target="_blank" class="project-tile"> 
+        <img class="project-link" src="/assets/product_landing_page.png" alt="">
+        <p >Product Landing Page</p>
+      </a>
+      <a href="pages/survey.html" target="_blank"> 
+        <img class="project-link" src="/assets/survey_page.png" alt="" class="project-tile">
+        <p >Survey Page</p>
+      </a>
+      <a href="pages/technical_documentation.html" target="_blank" class="project-tile"> 
+        <img class="project-link" src="/assets/tech_document.png" alt="">
+        <p >Technical Document Page </p>
+      </a>
+      <a href="pages/tribute.html" target="_blank" class="project-tile"> 
+        <img class="project-link" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Circle-icons-computer.svg/1024px-Circle-icons-computer.svg.png" alt="">
+        <p>Tribute Page</p>
+      </a>
+     </div>
+    </section>
 
-<div id="author">
-  <h1 class="title">About Me :</h1>
-</div>
+<section id="author">
+  <h1 class="title">About Me </h1>
+</section>
 
 
 
@@ -142,9 +226,23 @@ html{
 
 <footer>
 
-  <div id="profile-link">
-
-  </div>
+  <section id="contact-me">
+    <h3 class="contact-title">Contacts</h3>
+    <div id="profile-link">
+      <a href="https://github.com/Phyozawhein" target="_blank"> 
+        <img class="contact-link" src="/assets/githublogo.png" alt="">
+        
+      </a>
+      <a href="https://www.linkedin.com/in/phyo-hein-45104b156/" target="_blank"> 
+        <img class="contact-link" src="/assets/linkedin.png" alt="">
+        
+      </a>
+      <span class="email">Email: phyozawhein1997@gmail.com</span>
+    </div>
+    
+      
+     
+    </section>
 
 </footer>
 

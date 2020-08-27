@@ -2,7 +2,7 @@
 <html lang="en">
 <style>
 @media (max-width: 550px){
-
+ 
 }
 
 body{
@@ -17,7 +17,7 @@ html{
   a:link, a:visited {  
     border: none;
     color: #FFFFFF;
-    padding: 15px 32px;
+    padding: 0px 10px;
     text-align: center;
     transition-duration: 0.4s;
     text-decoration: none;
@@ -26,14 +26,24 @@ html{
     display: inline-block;
     }
     a:hover{
-      scale: 1.2;
+      transform:scale(1.2);
       display: inline-block;
     }
-
+  .contact-link{
+    width: 50px;
+    height: auto;
+    
+  }
+  .contact-title{
+    text-align: center;
+    margin: 0 ;
+    padding: 10px;
+  }
   .email{
     margin: 0px;
     padding: 10px 0;
     text-align: center;
+    align-self: center;
   }
 .items{
   margin-top: 50px;
@@ -41,22 +51,19 @@ html{
   display: flex;
   flex-direction: row;
   justify-content: center;
+  max-width:100%;
+  height: auto;
   
 }
 
 .project-link{
-  width:100px;
+  width:100%;
   height: auto;
 }
 .nav-link{
   margin-right: 20px;
 }
-.nav-link a{
-  text-decoration: none;
-  color: white;
-  font-size: 19px;
-  display: inline-block;
-}
+
 
 .title{
   text-align: center;
@@ -69,15 +76,17 @@ html{
 .welcome-title{
   position: relative;
   top: 45%;
-  font-size: 100px;
+  font-size: 200%;
   animation-name: welcome-animation;
   animation-duration: 1s;
   animation-fill-mode: forwards;
   margin: 0px;
+  max-width: 100%
 }
 #contact-me{
   background-color:grey;
   margin: 0px;
+  max-height: 10%;
   
 }
 #dev-logo{
@@ -88,14 +97,14 @@ html{
     transition-duration: 0.4s;
 }
 #dev-logo:hover{
-  scale: 1.5;
+  transform:scale( 1.5);
+  
 }
 
 #author{
   margin:  auto;
   width: auto;
   height: 100vh;
- 
   background-color: rgb(29, 28, 28);
   background-size: 100% 100%;
   background-position: 50% 50%;
@@ -186,21 +195,21 @@ html{
   <section id="projects" class="projects-section">
     <h1 class="title">Projects</h1>
     <div class="items">
-      <a href="pages/product_landing.html" target="_blank"> 
+      <a href="pages/product_landing.html" target="_blank" class="project-tile"> 
         <img class="project-link" src="/assets/product_landing_page.png" alt="">
-        <p class="project-tile" >Product Landing Page</p>
+        <p >Product Landing Page</p>
       </a>
       <a href="pages/survey.html" target="_blank"> 
-        <img class="project-link" src="/assets/survey_page.png" alt="">
-        <p class="project-tile">Survey Page</p>
+        <img class="project-link" src="/assets/survey_page.png" alt="" class="project-tile">
+        <p >Survey Page</p>
       </a>
-      <a href="pages/technical_documentation.html" target="_blank"> 
+      <a href="pages/technical_documentation.html" target="_blank" class="project-tile"> 
         <img class="project-link" src="/assets/tech_document.png" alt="">
-        <p class="project-tle">Technical Document Page </p>
+        <p >Technical Document Page </p>
       </a>
-      <a href="pages/tribute.html" target="_blank"> 
+      <a href="pages/tribute.html" target="_blank" class="project-tile"> 
         <img class="project-link" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Circle-icons-computer.svg/1024px-Circle-icons-computer.svg.png" alt="">
-        <p class="project-tile">Tribute Page</p>
+        <p>Tribute Page</p>
       </a>
      </div>
     </section>
@@ -218,19 +227,19 @@ html{
 <footer>
 
   <section id="contact-me">
-    <h1 class="title">Contacts</h1>
+    <h3 class="contact-title">Contacts</h3>
     <div id="profile-link">
       <a href="https://github.com/Phyozawhein" target="_blank"> 
-        <img class="project-link" src="/assets/githublogo.png" alt="">
-        <p class="project-tile" >GitHub</p>
+        <img class="contact-link" src="/assets/githublogo.png" alt="">
+        
       </a>
       <a href="https://www.linkedin.com/in/phyo-hein-45104b156/" target="_blank"> 
-        <img class="project-link" src="/assets/linkedin.png" alt="">
-        <p class="project-tile" >Linkedin</p>
+        <img class="contact-link" src="/assets/linkedin.png" alt="">
+        
       </a>
-      
+      <span class="email">Email: phyozawhein1997@gmail.com</span>
     </div>
-    <p class="email">Email: phyozawhein1997@gmail.com</p>
+    
       
      
     </section>
