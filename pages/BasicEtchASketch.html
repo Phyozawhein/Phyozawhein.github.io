@@ -1,0 +1,71 @@
+<html>
+<head>
+  <title>Etch a Sketch</title>
+  <meta charset="UTF-8"/>
+</head>
+
+<style>
+  div{
+    display:flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    justify-content: center;
+  }
+  td{
+    width: 8px;
+    height: 8px;  
+  }
+  table{
+    border: thin solid black;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+  }
+</style>
+
+<body>
+  <div>
+  <button onclick="Reset()">Reset</button>
+  <button onclick="CreateBoard()">Change board size</button>
+  </div>
+<table> </table>
+  <script>
+    // Your JavaScript goes here!
+    const table= document.querySelector('table');
+    CreateBoard();
+    const allcol = document.querySelectorAll('td');
+     
+    function Reset()
+    {
+
+      allcol.forEach(one => one.style.background="white");
+    }
+
+    function CreateBoard()
+    {   while (table.firstChild) 
+        {
+        table.removeChild(table.firstChild);
+        }
+
+        let val = parseInt(prompt("enter a number ! "));
+    
+        for(let i=0;i<val; i++)
+        {
+          let row = document.createElement('tr');
+
+          for(let j=0;j<val;j++)
+          {
+            
+            row.appendChild(document.createElement('td'));
+          
+          }
+          table.appendChild(row);
+        }
+        const allcol = document.querySelectorAll('td');
+        allcol.forEach(col=> col.addEventListener("mouseover",()=>{col.style.background="red"}));
+    }
+
+     
+ </script>
+</body>
+</html>
