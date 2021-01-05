@@ -1,0 +1,100 @@
+<html>
+<head>
+  <title>Basic Calculator</title>
+  <meta charset="UTF-8"/>
+</head>
+<style>
+  .buttons{
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    z-index: 1;
+    background: white;
+  }
+  .buttons:hover{
+    transition-duration: 0.7s;
+    background: rgb(196, 188, 188);
+  }
+  
+  .calc{
+    display: grid;
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+    background: black;  
+  }
+  .calBody{
+    display: flex;
+    flex-direction: row;
+   
+  }
+  .numPad{
+    display:flex;
+    flex-direction: column;
+  }
+  .Row{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+  }
+  #Screen{
+    width:100%;
+  }
+</style>
+<body>
+<div class="calc">
+  <div class="Row">
+    <div ><input type="text" id="Screen" value="" disabled></div>
+  </div>
+  
+    
+
+      <div class="Row">
+      <div class="buttons" onclick="document.getElementById('Screen').value+=1">1</div>
+        <div class="buttons"onclick="document.getElementById('Screen').value+=2" >2</div>
+        <div class="buttons" onclick="document.getElementById('Screen').value+=3">3</div>
+      </div>
+      <div class="Row">
+        <div class="buttons" onclick="document.getElementById('Screen').value+=4">4</div>
+        <div class="buttons" onclick="document.getElementById('Screen').value+=5">5</div>
+        <div class="buttons" onclick="document.getElementById('Screen').value+=6">6</div>
+      </div>
+      <div class="Row">
+        <div class="buttons" onclick="document.getElementById('Screen').value+=7">7</div>
+        <div class="buttons" onclick="document.getElementById('Screen').value+=8">8</div>
+        <div class="buttons" onclick="document.getElementById('Screen').value+=9">9</div>
+      </div>
+      <div class="Row">
+        <div class="buttons" onclick="document.getElementById('Screen').value+=0">0</div>
+        <div class="buttons" onclick="document.getElementById('Screen').value+='+'">+</div>
+        <div  class="buttons" onclick="document.getElementById('Screen').value+='-'">-</div>
+      </div>
+      <div class="Row">
+        <div  class="buttons" onclick="document.getElementById('Screen').value+='*'">*</div>
+        <div  class="buttons" onclick="document.getElementById('Screen').value+='/'">/</div>
+        <div  class="buttons" onclick="Evaluate()">=</div>
+      </div>
+      <div class="Row">
+        <div class="buttons" onclick="document.getElementById('Screen').value=document.getElementById('Screen').value.substring(0,document.getElementById('Screen').value.length-1)">back</div>
+        <div class="buttons" onclick="document.getElementById('Screen').value='' ">clear</div>
+      </div>
+   
+    
+  
+</div>
+  <script>
+    // Your JavaScript goes here!
+
+function Evaluate(){
+  let items = [...document.getElementById("Screen").value];
+  for(let i=0;i<items.length;i++)
+  {
+    console.log(items[i]+"\n");
+  }
+}
+     
+ </script>
+</body>
+</html>
