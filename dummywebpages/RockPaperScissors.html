@@ -1,0 +1,65 @@
+<html>
+<head>
+  <title>Rock, Paper ,Scissors</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+  <h1>Rock, Paper Scissors</h1>
+  <p>Pick one of them ! </p>
+  <div class="container">
+    <button id="rock" value="0">Rock</button>
+    <button id="paper" value="1">Paper</button>
+    <button id="scissors" value="2">Scissors</button>
+  </div>
+  <div class="result">
+    <p>Choices</p>
+    <p class="choices"></p>
+    <p>Scores</p>
+   <p>Player :  <span class="player"></span></p>
+    <p>Computer : <span class="computer"></span></p>
+  </div>
+  <script>
+    // Your JavaScript goes here!
+    let RPS = ['Rock', 'Paper', 'Scissors'];
+    const rock=document.getElementById('rock');
+    const paper= document.getElementById('paper');
+    const scissors= document.getElementById('scissors');
+    const choices= document.querySelector('.choices');
+    let computerschoice=0, playerschoice=0, result="", pscore=0, cscore=0;
+
+    function GameOn(val){
+     computerschoice=Math.floor(Math.random()*Math.floor(3));
+     result=`Player: ${RPS[val]} <br/>Computer: ${RPS[computerschoice]} `;
+     if(computerschoice !== val)
+     { 
+     if ( computerschoice === 0 && val === 2) // com wins
+     { cscore++;}
+     else if (computerschoice === 1 && val === 0 ) 
+     { cscore++;}
+     else if ( computerschoice === 2 && val === 1)
+     {cscore++;}
+     else{ pscore++;} // player wins 
+    }
+     else 
+     {}
+     return result;
+    }
+
+    rock.addEventListener("click",()=>{ 
+      choices.innerHTML=GameOn(parseInt(rock.value));
+      document.querySelector('.computer').innerHTML=cscore;
+      document.querySelector('.player').innerHTML=pscore;
+    });
+    paper.addEventListener("click",()=>{
+      choices.innerHTML=GameOn(parseInt(paper.value));
+      document.querySelector('.computer').innerHTML=cscore;
+      document.querySelector('.player').innerHTML=pscore;
+    });
+    scissors.addEventListener("click",()=>{
+      choices.innerHTML=GameOn(parseInt(scissors.value));
+      document.querySelector('.computer').innerHTML=cscore;
+      document.querySelector('.player').innerHTML=pscore;
+    });
+ </script>
+</body>
+</html>

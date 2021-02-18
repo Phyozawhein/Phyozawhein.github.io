@@ -1,249 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
-<style>
-@media (max-width: 550px){
- 
-}
-
-body{
-    padding: 0px;
-    margin: 0px;
-  }
-html{
-    font-family: Helvetica, Courier, monospace;
-    color: white;
-  }
-
-  a:link, a:visited {  
-    border: none;
-    color: #FFFFFF;
-    padding: 0px 10px;
-    text-align: center;
-    transition-duration: 0.4s;
-    text-decoration: none;
-    font-size: 16px;
-    cursor: pointer;
-    display: inline-block;
-    }
-    a:hover{
-      transform:scale(1.2);
-      display: inline-block;
-    }
-  .contact-link{
-    width: 50px;
-    height: auto;
-    
-  }
-  .contact-title{
-    text-align: center;
-    margin: 0 ;
-    padding: 10px;
-  }
-  .email{
-    margin: 0px;
-    padding: 10px 0;
-    text-align: center;
-    align-self: center;
-  }
-.items{
-  margin-top: 50px;
-  padding: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  max-width:100%;
-  height: auto;
-  
-}
-
-.project-link{
-  width:100%;
-  height: auto;
-}
-.nav-link{
-  margin-right: 20px;
-}
-
-
-.title{
-  text-align: center;
-  padding: 20px;
-  font-size: 50px;
-  margin: 0px;
-  top: 20px;
-}
-
-.welcome-title{
-  position: relative;
-  top: 45%;
-  font-size: 200%;
-  animation-name: welcome-animation;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  margin: 0px;
-  max-width: 100%
-}
-#contact-me{
-  background-color:grey;
-  margin: 0px;
-  max-height: 10%;
-  
-}
-#dev-logo{
-  margin: auto;
-  width: auto;
-  height: auto;
-  -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-}
-#dev-logo:hover{
-  transform:scale( 1.5);
-  
-}
-
-#author{
-  margin:  auto;
-  width: auto;
-  height: 100vh;
-  background-color: rgb(29, 28, 28);
-  background-size: 100% 100%;
-  background-position: 50% 50%;
-  }
-
-#projects{
-  margin: 0 auto;
-  width: auto;
-  height: 100vh;
-  background-image: url("assets/author-background.png");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  }
-#profile-link{
-  margin: 0 auto;
-  width: auto;
-  padding:0px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-#navbar{
-  margin: 0px;
-  padding: 0px;
-  display: flex;
-  flex-direction: row;
-  position: fixed;
-  z-index: 2;
-  max-width:100%;
-  }
-#navitems{
-  box-shadow: 5px 10px 8px #888888;
-  
-}
-#navlist{
-  list-style:none;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-#welcome-section{
-  background: linear-gradient(45deg, cyan , pink);
-  width: auto;
-  height: 100vh;
-  padding: 0px;
-  margin: 0px ;
-  text-align: center;
-  
-  }
-  
-@keyframes welcome-animation{
-  
-    0%{
-      opacity: 0;
-      left: -10%;
-    }
-
-    100%{
-      opacity: 1;
-      left: 0%;
-    }
-  }
-
-</style>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Phyo Zaw Hein's Portfolio</title>
+    <script src="https://kit.fontawesome.com/0901f2893b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phyo's Personal Website</title>
 </head>
 <body>
-  <nav id="navbar">
-    <img id="dev-logo" src="assets/icons8-source-code-64.png" alt="Code logo">
-    <ul id="navlist">
-      <li class="nav-link"> <a href="#welcome-section"> Home </a> </li>
-      <li class="nav-link"> <a href="#projects"> Personal Projects </a> </li>
-      <li class="nav-link"> <a href="#author"> About me </a></li>
-    </ul>
-
-  </nav>
-
-  <div id="welcome-section">
-
-    <h1 class="welcome-title">Welcome to my portfolio</p>
     
-  </div>
+    <header>
+        <nav  class="navigation"    >
+            <div class="nav-logo">
+                <a href="#Home">
+                 <img src="assets/logo.png" alt="web development logo"   class="logo"/>
+                 </a>
+            </div>   
+            <div class="nav-links">
+                <a href="#Home" class="nav-link">Home</a>
+                <a href="#About" class="nav-link">About</a>
+                <a href="#Projects" class="nav-link">Projects</a>
+                <a href="#WorkExp" class="nav-link">Experience</a>
+                <a href="#Contact" class="nav-link">Contact</a>
+            </div>
+        </nav>
+    </header>
 
-  <section id="projects" class="projects-section">
-    <h1 class="title">Projects</h1>
-    <div class="items">
-      <a href="pages/product_landing.html" target="_blank" class="project-tile"> 
-        <img class="project-link" src="/assets/product_landing_page.png" alt="">
-        <p >Product Landing Page</p>
-      </a>
-      <a href="pages/survey.html" target="_blank"> 
-        <img class="project-link" src="/assets/survey_page.png" alt="" class="project-tile">
-        <p >Survey Page</p>
-      </a>
-      <a href="pages/technical_documentation.html" target="_blank" class="project-tile"> 
-        <img class="project-link" src="/assets/tech_document.png" alt="">
-        <p >Technical Document Page </p>
-      </a>
-      <a href="pages/tribute.html" target="_blank" class="project-tile"> 
-        <img class="project-link" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Circle-icons-computer.svg/1024px-Circle-icons-computer.svg.png" alt="">
-        <p>Tribute Page</p>
-      </a>
-     </div>
-    </section>
+    <main class="body">
 
-<section id="author">
-  <h1 class="title">About Me </h1>
-</section>
+        <section class="Home section" id="Home">
+                <h1 class="Welcome">Hi , Welcome to my Page. </h1>
+                <h2 class="Welcome">My name is Phyo Zaw Hein !</h2>
+                <h2 class="Welcome">  Aspiring  Web Fullstack Developer </h3>
+        </section>
 
+        <section class="About section"  id="About" >
 
+            <h1 class="section-title">Profile</h1>
+            
+            <p class="section-subtitle">“Hoping for the best, prepared for the worst, and unsurprised by anything in between.”― Maya Angelou, I Know Why the Caged Bird Sings </p>
+            
 
-  
+            <div class="about-body">
 
-</body>
+                <div class="bio">
+                    <div class="about-text">
+                        <h2>About Me</h2>
+                        <p> I'm an international student who studies computer science in city college of New York. My passion is in web development and my focus is in front-end development. My current main focus is on front-end. I use 
+                            ReactJS for framework but I have some experience in VueJS as well. 
+                            Despite my focus in front-end development, I am planning to dip my toes 
+                            into backend develpment because my main is to become a full-stack web 
+                            developer.    </p>
+                    </div>
+                </div>
+              
+                <img src="/assets/author_pic.jpg" alt="author profile picture" class="author-pic"/>
 
-<footer>
+                <div class="personal-details">
+                    <h2>Personal Details </h2>
+                    <p>Name: Phyo Zaw Hein</p>
+                    <p>Nationality: Myanmar </p>
+                    <p>Current Residence: New York, USA</p>
+                    <p>Fun facts:</p>
+                    <ul>
+                        <li>Burma is my country's colonial name.</li>
+                        <li>Myanmar is a South-east Asian country</li>
+                        <li>Mrs. Aung San Su Kyi, a noble prize winner, is a citizen of Myanmar</li>
+                    </ul>
+                    
+                </div>
+            </div>
 
-  <section id="contact-me">
-    <h3 class="contact-title">Contacts</h3>
-    <div id="profile-link">
-      <a href="https://github.com/Phyozawhein" target="_blank"> 
-        <img class="contact-link" src="/assets/githublogo.png" alt="">
-        
-      </a>
-      <a href="https://www.linkedin.com/in/phyo-hein-45104b156/" target="_blank"> 
-        <img class="contact-link" src="/assets/linkedin.png" alt="">
-        
-      </a>
-      <span class="email">Email: phyozawhein1997@gmail.com</span>
-    </div>
-    
+        </section>
       
+        <section class="Projects section" id="Projects">
+
+            <h1 class="section-title">Projects</h1>
+
+            <div class="projects-body">
+
+                <ul class="project-container">
+                    <li class="project">
+                        <a href="https://react-my-burger-4bf1b.web.app/" target="#">
+                            <img src="./assets/burger.png" alt="project thumbnail" class="project-img"/>
+                            <p>Burger Builder</p>
+                        </a>
+                    </li>
+                    <li class="project">
+                        <a href="./dummywebpages/product_landing.html" target="#">
+                            <img src="./assets/productlanding.png" alt="project thumbnail" class="project-img" style="height: 60%"/>
+                            <p>Product Landing Page </p>
+                        </a>
+                    </li>
+                    <li class="project">
+                        <a href="./dummywebpages/survey.html" target="#">
+                            <img src="./assets/surveyIcon.png" alt="project thumbnail" class="project-img"/>
+                            <p>Survey Page</p>
+                        </a>
+                    </li>
+                    <li class="project">
+                        <a href="./dummywebpages/technical_documentation.html" target="#">
+                            <img src="./assets/techdocIcon.png" alt="project thumbnail" class="project-img" style="height: 60%"/>
+                            <p>Technical Document (Java) </p>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </section>
      
-    </section>
+        <section class="WorkExp section" id="WorkExp">
 
-</footer>
+            <h1 class="section-title">Work Experience</h1>
 
+            <div class="timeline-container">
+                <ul class="timeline">
+                    <li class="timeline-event">
+                      <label class="timeline-event-icon"></label>
+                      <div class="timeline-event-copy">
+                        <p class="timeline-event-thumbnail">February 2021 - May 2021</p>
+                        <h3>City College of New York, Computer Science</h3>
+                        <h4>Teaching Assistant</h4>
+                        <p><strong>CSC 211: Computer Fundamentals TA</strong></p>
+                        <p>Assist professor in grading assignments and lab assignment.</p>
+                      </div>
+                    </li>
+                    <li class="timeline-event">
+                      <label class="timeline-event-icon"></label>
+                      <div class="timeline-event-copy">
+                        <p class="timeline-event-thumbnail">February 2020 - July 2020</p>
+                        <h3>WEBMD</h3>
+                        <h4>Software Development Intern</h4>
+                        <p><strong>Front-end, Backend, DevOps</strong></p>
+                        <p>
+                            Used Vue JS to create interactive components for newsletter admin tool.
+                        </p>
+                         <p>
+                            Participated in all development team trainings, daily meetings
+                            and huddles.
+                        </p>
+                        <p>
+                            Collaborated with development teams to coordinate build integration.
+                        </p>
+                        <p>
+                            Increased efficiency through task automation using Jenkins Job
+                            and IBM UDeploy.
+                       
+                        <p>
+                            Worked closely with development team members to identify and
+                            remove software bugs.
+                        </p>
+                      </div>
+                    </li>
+                    <li class="timeline-event">
+                      <label class="timeline-event-icon"></label>
+                      <div class="timeline-event-copy">
+                        <p class="timeline-event-thumbnail">June 2019 - August 2019</p>
+                        <h3>Design and Disorder</h3>
+                        <h4>Field Consultant</h4>
+                        <p><strong>Programmer, Software Development</strong><br></p>
+                        <p>
+                                Collaborated with the development team to set up a data pipeline
+                                between assistive watch and the data server using Cayenne.
+                        </p>
+                        <p>
+                            Utilized Arduino to configure the watch to connect to door sensor
+                            and other house utilities.
+                        </p>
+                      </div>
+                    </li>
+                    <li class="timeline-event">
+                        <label class="timeline-event-icon"></label>
+                        <div class="timeline-event-copy">
+                          <p class="timeline-event-thumbnail">June 2018 - June 2020</p>
+                          <h3>City College of New York, Interdisciplinary Division</h3>
+                          <h4>College Assistant</h4>
+                          <p>
+                            Create and maintain schedules for academic advisors. Set up student appointments with advisors and counselors.
+                            Handle and maintain confidential student records. 
+                            Oversee and set up college events. 
+                            Distribute college-related information to students. 
+                            </p>
+                        </div>
+                      </li>
+                  </ul>
+            </div>
+        </section>
+    </main>
+    <footer class="Contact" id="Contact">
+        <h1 class="section-title">Contact</h1>
+        <div class="contact-body">
+            <p>If you want to reach out: </p>
+                    
+            <a href="https://www.linkedin.com/in/phyo-hein-45104b156/" target="#"  > 
+                <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+            <a href="https://github.com/Phyozawhein" target="#"  > 
+                <i class="fab fa-github-alt fa-2x"></i>
+            </a>
+            <a href="mailto:phyozawhein1997@gmail.com" target="#"> 
+                <i class="fas fa-envelope fa-2x"></i>
+            </a>
+        </div>
+
+    </footer>
+</body>
 </html>

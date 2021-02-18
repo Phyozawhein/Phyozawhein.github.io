@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <style>
+
+@media (max-width: 650px) {
+  .dev-img > img {
+    
+  } 
+}
+
+    a:link, a:visited {  
+    border: none;
+    color: #FFFFFF;
+    padding: 15px 32px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    }
+    a:hover{
+      scale: 1.5;
+    }
+    body{
+      background: linear-gradient(90deg,cyan, pink);
+    }
+    .css-skill{
+      animation-name:cssSkill;
+      background-color: rgb(86, 107, 221);
+    }
+    #contact{
+      background: linear-gradient(45deg, orange,gold);
+      box-shadow: 0 10px 10px 0 rgba(0,0,0,0.5);
+      padding: 10px 15px;
+      border-radius: 50px;
+      text-align: center;
+      margin: 10px;
+    }
+    #description{
+        justify-self: center;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .dev-img{
+      border-radius: 50px;
+      width: 40%;
+      height: auto;
+      float:left;
+      
+      margin-right: 20px;
+    }
+   #home{
+      text-align: center;
+    }
+    h2{
+      margin: 0px;
+      padding: 0px;
+    }
+    #header{
+      padding : 0px;
+      margin: 0px;
+      background-color: grey;
+      width:100%;
+      position: fixed;
+      top: 0;
+      
+    }
+    #header-img{
+      width: 5%;
+      height: auto;
+      border-radius: 50%;
+      margin:10px;
+  
+    }
+ 
+    html{
+        background: url('assets/cool-background.png')
+        no-repeat center center fixed;
+        background-size: cover;
+        height: 100%;
+        overflow: scroll;
+        }
+    .html-skill{
+      animation-name: htmlSkill;
+      background-color: rgb(228, 71, 15);
+
+    }
+    .item-card{
+      width: 100%;
+      padding: 10px;
+      display: flex;
+      flex-direction: row;
+    }
+    .item-icons{
+      width: 10%;
+      height:auto;
+      margin-right: 20px;
+      
+    }
+    .item-descrip{
+      align-self: center;
+    }
+    .js-skill{
+      animation-name: jsSkill;
+      background-color:orange;
+    }
+    #main{
+      max-width: 1000px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    #nav-bar{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 50px;
+    }
+    #proudct-card{
+      
+      display: flex;
+      flex-direction: column;
+      
+
+    }
+    .sets{
+      float: right;
+    }
+    #skills{
+      display:flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+    .skill-bar{
+      width: 40px;
+      height: 40px;
+      border-radius: 5px;
+      margin-left: 10px;
+      animation-duration: 3s;
+      animation-fill-mode: forwards;
+      text-align: center;
+      color: white;
+      font-weight: bold;
+      padding-top: 15px;
+      
+    }
+ 
+    #skill-card > h2,  .feature-title {
+      background: linear-gradient(90deg, yellow, gold);
+     
+      padding: 10px 15px;
+      border-radius: 50px;
+      text-align: center;
+      margin: 10px;
+    }
+
+    .skill-set {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      padding: 10px 15px;
+      border-radius: 50px;
+      text-align: center;
+      margin: 0px;
+    }
+    .skill-item{
+      display: flex;
+      align-items:center;
+    }
+    .skill-icon{
+      max-width: 15%;
+      max-height: auto;
+      margin: 10px;
+    }
+    #submit{
+      margin-top:10px;
+    }
+    ul{
+      list-style: none;
+      display: flex;
+
+    }
+    #video{
+      max-width: 100%;
+      height: auto;
+      margin: 10px;
+      
+
+    }
+    @keyframes htmlSkill{
+      0%{
+        width: 0%;
+      }
+      100%{
+        width:70%;
+      }
+    }
+
+    @keyframes cssSkill{
+      0%{
+        width: 0%;
+      }
+      100%{
+        width:90%;
+      }
+      }
+      @keyframes jsSkill{
+        0%{
+          width: 0%;
+        }
+      100%{
+        width:60%;
+      }
+      }  
+      
+  </style>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phyo's Product Page</title>
+
+</head>
+
+<body>
+
+  <header id="header">
+ 
+     <nav id="nav-bar">
+      <img src="https://banner2.cleanpng.com/20180602/oiv/kisspng-web-development-web-service-web-developer-digital-develop-5b131963a04d78.6954247915279783396566.jpg" alt="" id="header-img" style="width: 40px; height: auto;">
+       <ul>
+         <li>
+          <a  class="nav-link" href="#home">Home</a>
+         </li>
+         <li >
+           <a  class="nav-link" href="#skills">Skills</a>
+          </li>
+         <li >
+           <a class="nav-link" href="#contact">Contact</a>
+        </li>
+       </ul>
+       </nav>
+  
+  </header>
+
+ <br>
+
+    <div id="home">
+      <h1 >Welcome to Phyo's Product Page</h1>
+        <p>I am UI developer. My passion is coding and creating webpages and watch them work !   </p>
+        <video src="/assets/catto.mp4" id="video"   width="400px" height="400px"controls></video>
+          
+        <p id="description">Here is a video of "Thuston the cat" agreeing on my coding skills </p>
+     
+    </div>
+
+    <div id="product-card">
+      <h2 class="feature-title"> Quality of my services</h2>
+      <div class="item-card">
+        <img class="item-icons" src='/assets/chain_link.png' alt="robust icon"> </img>
+        <h2 class="item-descrip">Robust : The code is guarantee to work in all browsers !</h2>
+      </div>
+      <div class="item-card">
+        <img src="/assets/thumbs_up.png" alt="simple icon" class="item-icons">
+        <h2 class="item-descrip">Simple: All you need to do is download and its ready ! </h2>
+      </div>
+      <div class="item-card">
+        <img src="/assets/stylish.png" alt="stylish icon" class="item-icons">
+        <h2 class="item-descrip">Stylish: The fashion is up to date !</h2>
+      </div>
+
+    </div>
+  
+    <div id="skill-card">
+      
+      <h2>My Skills</h2>
+      <div id="skills">
+        
+        <img class="dev-img" src="https://image.freepik.com/free-vector/cute-fennec-fox-cartoon-hand-drawn-style_42349-134.jpg" alt="Dev picture">
+        
+        <div class="skill-set">
+
+          <div class="skill-item">
+            <img src="/assets/HTML.png" class="skill-icon">
+            <div class="skill-bar html-skill">8/10</div>
+          </div>
+          <div class="skill-item">
+            <img src="/assets/CSS.png" alt="" class="skill-icon">
+            <div class="skill-bar css-skill">9/10</div>
+          </div>
+          <div class="skill-item">
+            <img src="/assets/JS.png" alt="" class="skill-icon">
+            <div class="skill-bar js-skill">7/10</div>
+          </div>
+         
+        </div>
+        
+      </div>
+  
+    </div>
+   
+    <div id="contact">
+      <h2>Contact</h2>
+      <form action="https://www.freecodecamp.com/email-submit" method="POST" id="form">
+        
+         <p>If you want to contact me, enter the email and click "Contact" button to ping me!</p>
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Email">
+          
+          <input type="submit" value="Contact" id="submit">
+  
+      </form>
+    </div>
+ 
+  
+ 
+</body>
+
+
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+
+#author-title{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#author-pic{
+    height: auto;
+    width: 15%;
+    border-radius: 50%;
+    margin: 15px;
+    
+}
+#author-div{
+   
+    display:flex;
+    align-items: center;
+   
+}
+
+#author-info{
+    text-align: justify;
+    line-height: 25px;
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+}
+body{
+  background-image: url('https://cdn.hipwallpaper.com/i/13/65/8fdaYN.png');
+  overflow-x: hidden;
+}
+#img-div{
+    max-width: 100%;
+    height: auto;
+    
+}
+img{
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+}
+#img-caption{
+    font-size: 20px;
+    font-weight:bold;
+    text-align: center;
+}
+#links{
+    display: flex;
+    flex-direction: column;
+    
+}
+#name{
+    grid-column: 2/3;
+}
+#submit{
+    width: 100%;
+    background-color: rgb(20, 209, 20);
+    color: white;
+    padding: 5px ;
+    margin: 5px 0px;
+    justify-self: center;
+
+}
+#survey{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    margin: 0px;
+ 
+}
+#survey-form{
+    padding: 15px;
+    background: rgba(44, 130, 201, 1);
+}
+
+#title{
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    }
+textarea{
+ display:block;
+ margin-top: 10px;
+ width: 100%;
+}
+  </style>
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey</title>
+</head>
+<body>
+    
+    <div id="survey">
+
+     
+        <form  id="survey-form">
+  
+          <h1 id="title">Survey</h1>
+  
+          <p id="description">
+              This survey form is to find out how many of my viewers love 
+              hamburgers ! 
+          </p>
+  
+            <table>
+              
+              <tr>
+  
+                <td>
+                  <label id="name-label" for="name">
+                    Name: 
+                  </label>
+                </td>
+                <td>
+                  <input type="text" name="name" id="name" placeholder="Name" required/>
+                </td>
+  
+              </tr>
+             
+              <tr>
+                <td>
+                  <label id="email-label" for="email">
+                    Email: 
+                  </label>
+                </td>
+                <td>
+                  <input type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Email" required/>
+                </td>
+              </tr>
+             
+              <tr>
+  
+              <td>
+                <label id="number-label" for="number">
+                  Number: 
+                </label>
+              </td>
+              <td>
+                <input type="number" name="number" id="number" min="0" max="9" placeholder="Number" required/>  
+              </td>
+  
+             </tr>
+  
+             </table>
+  
+           <p> Where are you from ?</p> 
+             
+             <select name="country" id="dropdown">
+               <option value="USA">USA</option>
+               <option value="Canada">Canada</option>
+               <option value="Mexico">Mexico</option>
+           </select>
+  
+           <p>What is your favourite hamburger ?</p>
+           <label>
+           <input name="burger" value="cheese-burger" type="radio"  checked=""> Cheese Burger
+           </label>
+           <label>
+           <input name="burger" value="vegetarian-burger" type="radio"checked=""> Vegetarian Burger
+           </label>
+  
+  
+   
+                   
+  
+             <p>What is your favourite ketchup flavor ?</p>
+  
+             <div>
+              <label for="mustard">
+                <input type="checkbox" name="mustard" id="" value="mustard">  Mustard
+            </label>
+             </div>
+  
+             <div>
+              <label for="tomatoe">
+                <input type="checkbox" name="tomatoe" id="" value="tomatoe">  Tomatoe
+            </label>
+             </div>
+  
+             <div>
+              <label for="mayonaiese">
+                <input type="checkbox" name="mayonaiese" id="" value="mayonaiese">  Mayonaiese
+            </label>
+             </div>
+  
+  
+            <textarea name="thoughts" id="" cols="69" rows="10" placeholder="Any thoughts ?"></textarea>
+           
+            <button  value="Submit" id="submit"> Submit </button>
+  
+          </form>
+      </div>
+</body>
+</html>
